@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 body {
@@ -33,10 +33,6 @@ main section:first-child {
   background-image: url("/images/ian-valerio-CAFq0pv9HjY-unsplash.jpg");
   background-size: cover;
   flex: 1;
-}
-
-main section:nth-child(2) {
-  flex: 2;
 }
 
 main section:first-child > div {
@@ -63,4 +59,65 @@ main section:first-child h1::before {
   background: url(/images/odin-lined.png) no-repeat center;
   background-size: contain;
   margin-right: 8px;
+}
+
+main section:nth-child(2) {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+main section:nth-child(2) div {
+  flex: 1;
+}
+
+section:nth-child(2) > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 4rem;
+  padding-left: 3rem;
+  padding-right: 5rem;
+  gap: 1rem;
+}
+
+section:nth-child(2) div:first-child p {
+  max-width: 55ch;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+form {
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.47);
+  padding: 2rem;
+  border-radius: 4px;
+  height: 35vh;
+  padding-left: 5rem;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 30px 50px;
+}
+
+.grid-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+input {
+  border: 0.01px solid hsla(0, 0%, 0%, 0.247);
+  border-radius: 2px;
+  width: 15rem;
 }
