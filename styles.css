@@ -94,19 +94,30 @@ section:nth-child(2) div:first-child p {
 
 form {
   background-color: #f9f9f9;
-  -webkit-box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.47);
-  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.47);
-  padding: 2rem;
+  box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.43);
   border-radius: 4px;
-  height: 35vh;
-  padding-left: 5rem;
+  height: 40vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .grid-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
-  gap: 30px 50px;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  column-gap: 5px;
+  grid-auto-flow: row;
+}
+
+form > h2 {
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-family: sans-serif;
 }
 
 .grid-form div {
@@ -118,6 +129,99 @@ form {
 
 input {
   border: 0.01px solid hsla(0, 0%, 0%, 0.247);
-  border-radius: 2px;
+  border-radius: 3px;
   width: 15rem;
+  height: 1.7em;
+}
+
+label {
+  font-weight: 550;
+  color: rgb(58, 57, 57);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="password"]:invalid {
+  border-color: red;
+}
+
+input:focus {
+  border: 2px solid rgb(0, 123, 255);
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:hover {
+  border: 2px solid rgb(85, 169, 248);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: block;
+  padding: 2em;
+}
+
+button[type="submit"] {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-bottom: 1em;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+button[type="submit"]:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+button[type="submit"]:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
+.footer p {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.footer a {
+  text-decoration: none;
+  color: green;
+}
+
+.footer a:visited {
+  color: rgb(81, 90, 212);
+}
+
+.footer a:hover {
+  color: #0c4e28;
 }
