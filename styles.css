@@ -68,7 +68,7 @@ main section:first-child h1::before {
   display: inline-block;
   width: 1.2em;
   height: 1.2em;
-  background: url(/images/odin-lined.png) no-repeat center;
+  background: url("./images/odin-lined.png") no-repeat center;
   background-size: contain;
   margin-right: 8px;
 }
