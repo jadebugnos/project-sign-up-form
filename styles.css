@@ -35,6 +35,18 @@ main section:first-child {
   flex: 1;
 }
 
+main section:first-child p {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
+}
+
+main section:first-child a {
+  text-decoration: underline;
+  color: white;
+}
+
 main section:first-child > div {
   background-color: rgba(0, 0, 0, 0.178);
   margin-top: 10rem;
@@ -225,3 +237,4 @@ button[type="submit"]:hover {
 .footer a:hover {
   color: #0c4e28;
 }
+
